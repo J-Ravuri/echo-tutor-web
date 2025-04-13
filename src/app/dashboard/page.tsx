@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/sidebar';
 import {Icons} from '@/components/icons';
 import {Button} from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function Dashboard() {
   return (
@@ -34,46 +35,60 @@ export default function Dashboard() {
         <SidebarContent>
           <SidebarMenu>
             <SidebarMenuItem>
-              <SidebarMenuButton>
-                <Icons.home className="mr-2 h-4 w-4" />
-                <span>Home</span>
-              </SidebarMenuButton>
+              <Link href="/" className="w-full">
+                <SidebarMenuButton>
+                  <Icons.home className="mr-2 h-4 w-4" />
+                  <span>Home</span>
+                </SidebarMenuButton>
+              </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton>
-                <Icons.upload className="mr-2 h-4 w-4" />
-                <span>Upload Content</span>
-              </SidebarMenuButton>
+              <Link href="/upload" className="w-full">
+                <SidebarMenuButton>
+                  <Icons.upload className="mr-2 h-4 w-4" />
+                  <span>Upload Content</span>
+                </SidebarMenuButton>
+              </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton>
-                <Icons.messageSquare className="mr-2 h-4 w-4" />
-                <span>AI Tutoring</span>
-              </SidebarMenuButton>
+              <Link href="/ai-tutoring" className="w-full">
+                <SidebarMenuButton>
+                  <Icons.messageSquare className="mr-2 h-4 w-4" />
+                  <span>AI Tutoring</span>
+                </SidebarMenuButton>
+              </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton>
-                <Icons.workflow className="mr-2 h-4 w-4" />
-                <span>Personalized Learning Path</span>
-              </SidebarMenuButton>
+              <Link href="/personalized-learning-path" className="w-full">
+                <SidebarMenuButton>
+                  <Icons.workflow className="mr-2 h-4 w-4" />
+                  <span>Personalized Learning Path</span>
+                </SidebarMenuButton>
+              </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton>
-                <Icons.shield className="mr-2 h-4 w-4" />
-                <span>AI Assessment</span>
-              </SidebarMenuButton>
+              <Link href="/ai-assessment" className="w-full">
+                <SidebarMenuButton>
+                  <Icons.shield className="mr-2 h-4 w-4" />
+                  <span>AI Assessment</span>
+                </SidebarMenuButton>
+              </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton>
-                <Icons.plusCircle className="mr-2 h-4 w-4" />
-                <span>Concentration Games</span>
-              </SidebarMenuButton>
+              <Link href="/concentration-games" className="w-full">
+                <SidebarMenuButton>
+                  <Icons.plusCircle className="mr-2 h-4 w-4" />
+                  <span>Concentration Games</span>
+                </SidebarMenuButton>
+              </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton>
-                <Icons.share className="mr-2 h-4 w-4" />
-                <span>Multiplayer Study Games</span>
-              </SidebarMenuButton>
+              <Link href="/multiplayer-study-games" className="w-full">
+                <SidebarMenuButton>
+                  <Icons.share className="mr-2 h-4 w-4" />
+                  <span>Multiplayer Study Games</span>
+                </SidebarMenuButton>
+              </Link>
             </SidebarMenuItem>
           </SidebarMenu>
           <SidebarSeparator />
@@ -81,16 +96,20 @@ export default function Dashboard() {
             <SidebarGroupLabel>Account</SidebarGroupLabel>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton>
-                  <Icons.settings className="mr-2 h-4 w-4" />
-                  <span>Settings</span>
-                </SidebarMenuButton>
+                <Link href="/settings" className="w-full">
+                  <SidebarMenuButton>
+                    <Icons.settings className="mr-2 h-4 w-4" />
+                    <span>Settings</span>
+                  </SidebarMenuButton>
+                </Link>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton>
-                  <Icons.help className="mr-2 h-4 w-4" />
-                  <span>Support</span>
-                </SidebarMenuButton>
+                <Link href="/support" className="w-full">
+                  <SidebarMenuButton>
+                    <Icons.help className="mr-2 h-4 w-4" />
+                    <span>Support</span>
+                  </SidebarMenuButton>
+                </Link>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroup>
@@ -114,4 +133,3 @@ export default function Dashboard() {
     </>
   );
 }
-

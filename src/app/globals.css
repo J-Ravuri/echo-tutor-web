@@ -8,14 +8,14 @@ body {
 
 @layer base {
   :root {
-    --background: 207 71% 92%;
+    --background: 207 71% 98%;
     --foreground: 207 71% 15%;
-    --card: 207 71% 92%;
+    --card: 207 71% 98%;
     --card-foreground: 207 71% 15%;
-    --popover: 207 71% 92%;
+    --popover: 207 71% 98%;
     --popover-foreground: 207 71% 15%;
     --primary: 207 71% 42%;
-    --primary-foreground: 207 71% 92%;
+    --primary-foreground: 207 71% 98%;
     --secondary: 51 100% 80%;
     --secondary-foreground: 51 100% 15%;
     --muted: 51 100% 80%;
@@ -84,7 +84,5 @@ body {
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Comic Sans MS', cursive;
   }
 }
-

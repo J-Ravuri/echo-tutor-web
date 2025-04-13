@@ -20,10 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${comicNeue.variable} antialiased`}>
+      <body className={`${comicNeue.variable} font-comic-neue antialiased`}>
         {children}
       </body>
     </html>
   );
 }
-
