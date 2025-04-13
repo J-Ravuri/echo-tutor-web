@@ -35,7 +35,7 @@ export default function Dashboard() {
         <SidebarContent>
           <SidebarMenu>
             <SidebarMenuItem>
-              <Link href="/" className="w-full">
+              <Link href="/dashboard" className="w-full">
                 <SidebarMenuButton>
                   <Icons.home className="mr-2 h-4 w-4" />
                   <span>Home</span>
@@ -43,7 +43,7 @@ export default function Dashboard() {
               </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <Link href="/upload" className="w-full">
+              <Link href="/dashboard/upload" className="w-full">
                 <SidebarMenuButton>
                   <Icons.upload className="mr-2 h-4 w-4" />
                   <span>Upload Content</span>
@@ -51,7 +51,7 @@ export default function Dashboard() {
               </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <Link href="/ai-tutoring" className="w-full">
+              <Link href="/dashboard/ai-tutoring" className="w-full">
                 <SidebarMenuButton>
                   <Icons.messageSquare className="mr-2 h-4 w-4" />
                   <span>AI Tutoring</span>
@@ -59,7 +59,7 @@ export default function Dashboard() {
               </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <Link href="/personalized-learning-path" className="w-full">
+              <Link href="/dashboard/personalized-learning-path" className="w-full">
                 <SidebarMenuButton>
                   <Icons.workflow className="mr-2 h-4 w-4" />
                   <span>Personalized Learning Path</span>
@@ -67,7 +67,7 @@ export default function Dashboard() {
               </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <Link href="/ai-assessment" className="w-full">
+              <Link href="/dashboard/ai-assessment" className="w-full">
                 <SidebarMenuButton>
                   <Icons.shield className="mr-2 h-4 w-4" />
                   <span>AI Assessment</span>
@@ -75,7 +75,7 @@ export default function Dashboard() {
               </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <Link href="/concentration-games" className="w-full">
+              <Link href="/dashboard/concentration-games" className="w-full">
                 <SidebarMenuButton>
                   <Icons.plusCircle className="mr-2 h-4 w-4" />
                   <span>Concentration Games</span>
@@ -83,7 +83,7 @@ export default function Dashboard() {
               </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <Link href="/multiplayer-study-games" className="w-full">
+              <Link href="/dashboard/multiplayer-study-games" className="w-full">
                 <SidebarMenuButton>
                   <Icons.share className="mr-2 h-4 w-4" />
                   <span>Multiplayer Study Games</span>
@@ -96,7 +96,7 @@ export default function Dashboard() {
             <SidebarGroupLabel>Account</SidebarGroupLabel>
             <SidebarMenu>
               <SidebarMenuItem>
-                <Link href="/settings" className="w-full">
+                <Link href="/dashboard/settings" className="w-full">
                   <SidebarMenuButton>
                     <Icons.settings className="mr-2 h-4 w-4" />
                     <span>Settings</span>
@@ -104,7 +104,7 @@ export default function Dashboard() {
                 </Link>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <Link href="/support" className="w-full">
+                <Link href="/dashboard/support" className="w-full">
                   <SidebarMenuButton>
                     <Icons.help className="mr-2 h-4 w-4" />
                     <span>Support</span>
