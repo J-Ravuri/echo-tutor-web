@@ -1,1 +1,3 @@
-// Flows will be imported for their side effects in this file.
+import '@/ai/flows/personalize-learning-path.ts';
+import '@/ai/flows/generate-personalized-lessons.ts';
+import '@/ai/flows/provide-ai-assessment-feedback.ts';
