@@ -38,22 +38,43 @@ export interface ButtonProps
   asChild?: boolean
 }
 
+/**
+ *
+ * Guide on using the `asChild` prop:
+ *
+ * The `asChild` prop allows you to pass a React element as a child to the `Button` component,
+ * which will then be rendered as the actual button element. This is useful when you want to
+ * use a custom button element, such as a `Link` component from Next.js, but still want to
+ * apply the `Button` component's styles and variants.
+ *
+ * Example usage with Next.js Link:
+ * ```tsx
+ * import Link from 'next/link';
+ *
+ * function MyComponent() {
+ *   return (
+ *     <Button asChild>
+ *       <Link href="/about">About Us</Link>
+ *     </Button>
+ *   );
+ * }
+ * ```
+ */
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, children, ...props }, ref) => {
-    const Comp = asChild ? React.Fragment : "button"
+    const Comp = asChild ? React.Fragment : "button";
+
     return (
       Comp === React.Fragment ? (
-        <>
-          {React.Children.map(children, (child) =>
-            React.isValidElement(child) ? (
-              React.cloneElement(child, {
-                className: cn(buttonVariants({ variant, size, className }), child.props.className),
-                ref: ref,
-                ...props,
-              })
-            ) : null
-          )}
-        </>
+        React.Children.map(children, (child) =>
+          React.isValidElement(child) ? (
+            React.cloneElement(child, {
+              className: cn(buttonVariants({ variant, size, className }), child.props.className),
+              ref: ref,
+              ...props,
+            })
+          ) : null
+        )
       ) : (
         <Comp
           className={cn(buttonVariants({ variant, size, className }))}
@@ -63,10 +84,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           {children}
         </Comp>
       )
-    )
+    );
   }
-)
+);
 Button.displayName = "Button"
 
 export { Button, buttonVariants }
-
