@@ -35,7 +35,7 @@ export default function Dashboard() {
         <SidebarContent>
           <SidebarMenu>
             <SidebarMenuItem>
-              <Link href="/dashboard" className="w-full">
+              <Link href="/" className="w-full">
                 <SidebarMenuButton>
                   <Icons.home className="mr-2 h-4 w-4" />
                   <span>Home</span>
