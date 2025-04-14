@@ -26,8 +26,12 @@ export default function Dashboard() {
       <div className="flex h-screen">
         <Sidebar variant="inset" collapsible="icon">
           <SidebarTrigger>
-             <Icons.arrowRight className="h-5 w-5" />
-            <span className="sr-only">Toggle Sidebar</span>
+            {() => (
+              <>
+                <Icons.arrowRight className="h-5 w-5" />
+                <span className="sr-only">Toggle Sidebar</span>
+              </>
+            )}
           </SidebarTrigger>
           <SidebarHeader>
             <p className="font-medium">EchoTutor</p>
@@ -104,3 +108,4 @@ export default function Dashboard() {
     </SidebarProvider>
   );
 }
+

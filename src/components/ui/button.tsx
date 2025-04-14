@@ -76,9 +76,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     }
 
     return (
-      
+      <button
+        className={buttonClassName}
+        ref={ref}
+        {...props}
+      >
         {children}
-      
+      </button>
     );
   }
 );
@@ -86,4 +90,5 @@ Button.displayName = "Button"
 
 export { Button, buttonVariants }
     
+
 
