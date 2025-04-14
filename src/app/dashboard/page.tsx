@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Sidebar,
   SidebarContent,
@@ -8,25 +10,24 @@ import {
   SidebarInset,
   SidebarMenu,
   SidebarMenuButton,
-  SidebarMenuItem,
   SidebarSeparator,
   SidebarTrigger,
-  SidebarProvider
+  SidebarProvider,
+  SidebarMenuItem // Import SidebarMenuItem
 } from '@/components/ui/sidebar';
 import {Icons} from '@/components/icons';
 import {Button} from '@/components/ui/button';
 import Link from 'next/link';
+import React from 'react';
 
 export default function Dashboard() {
   return (
     <SidebarProvider>
       <div className="flex h-screen">
         <Sidebar variant="inset" collapsible="icon">
-          <SidebarTrigger asChild>
-            <Button variant="ghost" size="sm" className="p-1.5">
-              <Icons.arrowRight className="h-5 w-5" />
-              <span className="sr-only">Toggle Sidebar</span>
-            </Button>
+          <SidebarTrigger>
+             <Icons.arrowRight className="h-5 w-5" />
+            <span className="sr-only">Toggle Sidebar</span>
           </SidebarTrigger>
           <SidebarHeader>
             <p className="font-medium">EchoTutor</p>
@@ -102,3 +103,4 @@ export default function Dashboard() {
       </div>
     </SidebarProvider>
   );
+}
